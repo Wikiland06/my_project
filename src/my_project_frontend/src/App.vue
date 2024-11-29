@@ -6,11 +6,17 @@ let greeting = ref('');
 async function handleSubmit(e) {
   e.preventDefault();
   const target = e.target;
-  const name = target.querySelector('#name').value;
-  await my_project_backend.greet(name).then((response) => {
-    greeting.value = response;
-  });
+  const name = target.querySelector('#msg').value;
+  await my_project_backend.save_msg(msg)
+  await getMsg()
 }
+
+async function getMsg() {
+  displayMSG.value = await my_project_backend.get_msg()
+} 
+
+getMsg()
+
 </script>
 
 <template>

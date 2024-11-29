@@ -19,7 +19,7 @@ getMsg()
 </script>
 
 <template>
-  <main class="container mx-auto">
+  <main class="container mx-auto flex justify-center items-center flex-col p-6 border-2 border-cyan-700 w-fit rounded-xl">
     <img src="/logo2.svg" alt="DFINITY logo" />
     <br />
     <br />
